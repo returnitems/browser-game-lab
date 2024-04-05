@@ -9,3 +9,8 @@
     width: 700px;
     outline: 1px solid red;
 }
+
+.startButton {
+    width: 200px;
+    height: 200px;
+}
