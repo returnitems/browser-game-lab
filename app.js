@@ -31,7 +31,7 @@ const username = () => {
         submitButton.remove();
         inputBox.remove();
         message.remove();
-        initBox.style.display = "";
+        initBox.style.display = 'block';
     })
 };
 
