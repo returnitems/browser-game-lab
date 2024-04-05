@@ -4,6 +4,7 @@ const gameBox = document.querySelector(".gameBox");
 
 const initBox = document.querySelector(".initialBox");
 
+const gameText = document.querySelector(".gameText");
 
 const startButton = document.createElement("button");
 startButton.setAttribute("type", "button");
@@ -32,6 +33,10 @@ const username = () => {
         inputBox.remove();
         message.remove();
         initBox.style.display = 'block';
+        const welcomeMsg = document.createElement('p');
+        welcomeMsg.setAttribute('class', 'welcomeMsg');
+        welcomeMsg.textContent = "Welcome to Landscaping Simulator, " + inputBox.value;
+        gameText.appendChild(welcomeMsg);
     })
 };
 
