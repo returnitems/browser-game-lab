@@ -5,11 +5,28 @@
 
 .gameBox {
     margin: 0 auto;
-    height: 500px;
+    height: 700px;
     width: 700px;
     outline: 1px solid red;
 }
 
+.tools {
+    width: 200px;
+    height: 500px;
+    outline: 1px solid black;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+
+.toolPics {
+    width: 100px;
+    height: 450px;
+    outline: 1px solid black;
+    position: absolute;
+    margin-left: 50px;
+    margin-top: 25px;
+}
 .startButton {
     width: 200px;
     height: 200px;
