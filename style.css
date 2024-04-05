@@ -111,7 +111,8 @@
     display: none;
 }
 
-pre {
+#banner {
     font-size: 8px;
     display: none;
+    width: 500px;
 }

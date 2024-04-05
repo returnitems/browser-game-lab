@@ -6,6 +6,8 @@ const initBox = document.querySelector(".initialBox");
 
 const gameText = document.querySelector(".gameText");
 
+const banner = document.querySelector("#banner");
+
 const startButton = document.createElement("button");
 startButton.setAttribute("type", "button");
 startButton.setAttribute("class", "startButton");
@@ -27,17 +29,20 @@ const username = () => {
     submitButton.setAttribute('class', 'submitButton');
     submitButton.textContent = "Submit";
     gameBox.appendChild(submitButton);
+    banner.style.display = 'block';
 
     submitButton.addEventListener("click", function(){
+        if (inputBox.value != ""){
         submitButton.remove();
         inputBox.remove();
         message.remove();
         initBox.style.display = 'block';
         const welcomeMsg = document.createElement('p');
         welcomeMsg.setAttribute('class', 'welcomeMsg');
-        welcomeMsg.textContent = "Welcome to Landscaping Simulator, " + inputBox.value;
+        welcomeMsg.textContent = "Welcome to Landscaping Simulator, " + inputBox.value + ". A landscaping business game where you start with just your teeth to cut grass!";
         gameText.appendChild(welcomeMsg);
-    })
+        };
+    });
 };
 
 startButton.addEventListener("click", username);
