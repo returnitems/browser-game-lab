@@ -60,3 +60,40 @@
     position: relative;
     margin-top: 150px;
 }
+
+.firstMessage {
+    font-size: 18px;
+    position: absolute;
+    margin-top: 600px;
+    margin-left: 110px;
+}
+
+.inputBox {
+    position: relative;
+    margin-top: 600px;
+}
+
+.submitButton {
+    position: absolute;
+    margin-top: 600px;
+}
+
+#teeth {
+    height: 75px;
+    width: 75px;
+}
+
+#scissors {
+    height: 75px;
+    width: 75px;
+}
+
+#manMower {
+    height: 75px;
+    width: 75px;
+}
+
+#team {
+    height: 75px;
+    width: 75px;
+}
