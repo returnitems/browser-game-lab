@@ -2,6 +2,9 @@ const mainBox = document.querySelector(".mainBox");
 
 const gameBox = document.querySelector(".gameBox");
 
+const initBox = document.querySelector(".initialBox");
+
+
 const startButton = document.createElement("button");
 startButton.setAttribute("type", "button");
 startButton.setAttribute("class", "startButton");
@@ -23,6 +26,13 @@ const username = () => {
     submitButton.setAttribute('class', 'submitButton');
     submitButton.textContent = "Submit";
     gameBox.appendChild(submitButton);
+
+    submitButton.addEventListener("click", function(){
+        submitButton.remove();
+        inputBox.remove();
+        message.remove();
+        initBox.style.display = "";
+    })
 };
 
 startButton.addEventListener("click", username);
