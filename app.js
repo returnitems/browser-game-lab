@@ -1,3 +1,6 @@
+// ******* Coded by Jimmy, Karlon, and Umang ********
+
+//Grabbed elements
 const mainBox = document.querySelector(".mainBox");
 
 const gameBox = document.querySelector(".gameBox");
@@ -34,7 +37,7 @@ startButton.setAttribute("class", "startButton");
 startButton.textContent = "Start Game!";
 gameBox.appendChild(startButton);
 
-
+// Start button and Name function
 const username = () => {
     startButton.remove();
     const message = document.createElement('p');
@@ -65,6 +68,7 @@ const username = () => {
     });
 };
 
+// Game progression function
 const dayStart = () => {
     if (currentCash < 100) {
         let moneyEarned = Math.floor(Math.random() * 11);
