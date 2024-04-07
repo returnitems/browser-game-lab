@@ -14,6 +14,14 @@ const instructions = document.querySelector("#instructions");
 
 const startDay = document.querySelector("#startDay");
 
+const scissors = document.querySelector("#scissors");
+
+const manMower = document.querySelector("#manMower");
+
+const rideMower = document.querySelector("#rideMower");
+
+const team = document.querySelector("#team");
+
 // Variables
 let dayCount = 1;
 let currentCash = 0;
@@ -63,12 +71,31 @@ const dayStart = () => {
         currentCash += moneyEarned;
         welcomeMsg.textContent = "Welcome to day " + dayCount + " of your business. Today you earned $" + moneyEarned + ". Good job today! You now have a whopping total of $" + currentCash + " in your bank account!";
         dayCount += 1;
-    } else if (currentCash > 100 && currentCash < 250) {
+    } else if (currentCash >= 100 && currentCash < 250) {
+        scissors.style.display = "inline";
         let moneyEarned = Math.floor(Math.random() * 21);
         currentCash += moneyEarned;
         welcomeMsg.textContent = "Welcome to day " + dayCount + " of your business. Today you earned $" + moneyEarned + ". Good job today! You now have a whopping total of $" + currentCash + " in your bank account!";
         dayCount += 1;
-    } 
+    } else if (currentCash >= 250 && currentCash < 500) {
+        manMower.style.display = "inline";
+        let moneyEarned = Math.floor(Math.random() * 31);
+        currentCash += moneyEarned;
+        welcomeMsg.textContent = "Welcome to day " + dayCount + " of your business. Today you earned $" + moneyEarned + ". Good job today! You now have a whopping total of $" + currentCash + " in your bank account!";
+        dayCount += 1;
+    } else if (currentCash >= 500 && currentCash < 10000) {
+        rideMower.style.display = "inline";
+        let moneyEarned = Math.floor(Math.random() * 101);
+        currentCash += moneyEarned;
+        welcomeMsg.textContent = "Welcome to day " + dayCount + " of your business. Today you earned $" + moneyEarned + ". Good job today! You now have a whopping total of $" + currentCash + " in your bank account!";
+        dayCount += 1;
+    } else if (currentCash >= 10000 && currentCash < 100000) {
+        team.style.display = "inline";
+        let moneyEarned = Math.floor(Math.random() * 501);
+        currentCash += moneyEarned;
+        welcomeMsg.textContent = "Welcome to day " + dayCount + " of your business. Today you earned $" + moneyEarned + ". Good job today! You now have a whopping total of $" + currentCash + " in your bank account!";
+        dayCount += 1;
+    }
 }
 
 // const howTo = () => {
