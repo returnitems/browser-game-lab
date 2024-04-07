@@ -12,6 +12,14 @@ const banner = document.querySelector("#banner");
 
 const instructions = document.querySelector("#instructions");
 
+const startDay = document.querySelector("#startDay");
+
+// Variables
+let dayCount = 1;
+let currentCash = 0;
+
+
+
 const startButton = document.createElement("button");
 startButton.setAttribute("type", "button");
 startButton.setAttribute("class", "startButton");
@@ -49,14 +57,29 @@ const username = () => {
     });
 };
 
-const howTo = () => {
-    instructions.textContent = "Go Back";
-    if (instructions.textContent === "Go Back") {
-        welcomeMsg.textContent = `Your goal is to landscape enough to upgrade your tools to one day accumulate enough money to retire.
-        Retirement goal: $100,000`;
-    }
+const dayStart = () => {
+    if (currentCash < 100) {
+        let moneyEarned = Math.floor(Math.random() * 11);
+        currentCash += moneyEarned;
+        welcomeMsg.textContent = "Welcome to day " + dayCount + " of your business. Today you earned $" + moneyEarned + ". Good job today! You now have a whopping total of $" + currentCash + " in your bank account!";
+        dayCount += 1;
+    } else if (currentCash > 100 && currentCash < 250) {
+        let moneyEarned = Math.floor(Math.random() * 21);
+        currentCash += moneyEarned;
+        welcomeMsg.textContent = "Welcome to day " + dayCount + " of your business. Today you earned $" + moneyEarned + ". Good job today! You now have a whopping total of $" + currentCash + " in your bank account!";
+        dayCount += 1;
+    } 
 }
+
+// const howTo = () => {
+//     instructions.textContent = "Go Back";
+//     if (instructions.textContent === "Go Back") {
+//         welcomeMsg.textContent = `Your goal is to landscape enough to upgrade your tools to one day accumulate enough money to retire.
+//         Retirement goal: $100,000`;
+//     }
+// }
 
 startButton.addEventListener("click", username);
 
-instructions.addEventListener("click", howTo);
+startDay.addEventListener("click", dayStart);
+// instructions.addEventListener("click", howTo);
