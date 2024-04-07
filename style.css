@@ -80,6 +80,11 @@
 .submitButton {
     position: absolute;
     margin-top: 600px;
+    margin-left: 10px;
+}
+
+.instructions {
+    
 }
 
 #teeth {

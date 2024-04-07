@@ -6,7 +6,11 @@ const initBox = document.querySelector(".initialBox");
 
 const gameText = document.querySelector(".gameText");
 
+const welcomeMsg = document.createElement('p');
+
 const banner = document.querySelector("#banner");
+
+const instructions = document.querySelector("#instructions");
 
 const startButton = document.createElement("button");
 startButton.setAttribute("type", "button");
@@ -37,7 +41,7 @@ const username = () => {
         inputBox.remove();
         message.remove();
         initBox.style.display = 'block';
-        const welcomeMsg = document.createElement('p');
+        // const welcomeMsg = document.createElement('p');
         welcomeMsg.setAttribute('class', 'welcomeMsg');
         welcomeMsg.textContent = "Welcome to Landscaping Simulator, " + inputBox.value + ". A landscaping business game where you start with just your teeth to cut grass! Click the Instructions button for instructions or click Start Day to begin your business adventure!";
         gameText.appendChild(welcomeMsg);
@@ -45,4 +49,14 @@ const username = () => {
     });
 };
 
+const howTo = () => {
+    instructions.textContent = "Go Back";
+    if (instructions.textContent === "Go Back") {
+        welcomeMsg.textContent = `Your goal is to landscape enough to upgrade your tools to one day accumulate enough money to retire.
+        Retirement goal: $100,000`;
+    }
+}
+
 startButton.addEventListener("click", username);
+
+instructions.addEventListener("click", howTo);
